@@ -1,0 +1,359 @@
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Noto Naskh Arabic', serif;
+}
+/*---menu ---*/
+.menu_bar {
+	display:none;
+}
+
+header {
+	width: 100%;
+	text-align: right;
+}
+
+header nav {
+	padding-right: 64px;
+	background:rgb(254, 4, 4);
+	z-index:1000;
+	max-width: 10000px;
+	width:100%;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+header nav ul li:hover {
+	background:rgb(254, 4, 4);
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+
+header nav ul li a span {
+	margin-right:10px;
+}
+
+header nav ul li:hover .children {
+	display:block;
+}
+
+header nav ul li .children {
+	display: none;
+	background:rgb(255, 57, 57);
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+	display: block;
+}
+
+header nav ul li .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding-top:80px;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+}
+/* redes sociales */
+.red-so{
+	background:rgb(254, 4, 4);
+	padding: 1em 0;
+	text-align: center;
+	margin-top: auto;
+}
+
+.icon-btn {
+	background: radial-gradient(circle farthest-side at 30% 15%, white, #B2B2B2);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 75px;
+	line-height: 100px;
+	margin: 25px;
+	position: relative;
+	text-align: center;
+	-webkit-animation: jump 2s infinite;
+	-moz-animation: jump 2s infinite;
+	animation: jump 2s infinite;
+  }
+  .wrapper {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	position: relative;
+  }
+  
+  /* Circle inside */
+  .icon-btn span {
+	display: block;
+	width: 0;
+	height: 0;
+	border-radius: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  }
+  
+  .icon-btn:hover span {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	margin: -50px;
+  }
+  .facebook span {
+	background: radial-gradient(circle farthest-side at 30% 15%, #FFF, #ADB9D4 25%,  #3B5998 80%);
+  }
+  .twitter span {
+	background: radial-gradient(circle farthest-side at 30% 15%, #FFF, #C6E0FF 25%, #4099FF 80%);
+  }
+  .telegram span {
+		background-color:  #0088cc;
+  
+  }
+  .whatsapp span {
+		background-color: #25D366;
+  }
+  
+  .icon-btn i {
+	background: none;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 90px;
+	font-size: 50px;
+	z-index: 10;
+  }
+  
+  .icon-btn .fa-facebook {
+	color: #3B5998;
+  }
+  .icon-btn .fa-twitter {
+	color: #4099FF;
+  }
+  .icon-btn .fa-telegram {
+	color: #4099FF;
+  }
+  .icon-btn .fa-whatsapp {
+	color: #25D366;
+  }
+  .icon-btn:hover i{
+	color: white;
+  }
+  
+  .wrapper {
+	positon: relative;
+	display: inline-block;
+	margin: 20px;
+  }
+  
+  /* SHADOW */
+  .shadow {
+	width: 46px;
+	height: 10px;
+	background: rgba(0,0,0,0.2);
+	position: absolute;
+	left: 50%;
+	margin-top: -10px;
+	border-radius: 50%; 
+	-webkit-animation: shadow 2s infinite;
+	-moz-animation: shadow 2s infinite;
+	animation: shadow 2s infinite;
+	
+  }
+  
+  /* KEYFRAMES */
+  @-webkit-keyframes shadow {
+	50%{-webkit-transform: scale(1.4);}
+  }
+  @-moz-keyframes shadow {
+	50%{-moz-transform: scale(1.4);}
+  }
+  @keyframes shadow {
+	50%{transform: scale(1.4);}
+  }
+  
+  @-webkit-keyframes jump {
+	0%{bottom: 20px}
+	50%{bottom: 0;}
+	100%{bottom: 20px}
+  }
+  @-moz-keyframes jump {
+	0%{bottom: 20px}
+	50%{bottom: 0;}
+	100%{bottom: 20px}
+  }
+  @keyframes jump {
+	0%{bottom: 20px}
+	50%{bottom: 0;}
+	100%{bottom: 20px}
+  }
+    /*-----------عمل نضال -----------------*/
+
+	a {
+		text-decoration: none;
+	  }
+	  
+	  .et-hero-tabs,
+	  .et-slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		position: relative;
+		background-color: #fff;
+		text-align: center;
+		padding: 0 2em;
+	  }
+	  
+	  .et-hero-tabs-container {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 70px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		background: #fff;
+		z-index: 10;
+
+	  }
+	  .et-hero-tabs-container--top {
+		position: fixed;
+		top: 0;
+	  }
+	  
+	  .et-hero-tab {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		color: rgb(254, 4, 4);
+		transition: all 0.5s ease;
+		font-size: 1.1rem;
+		font-family: 'Reem Kufi', sans-serif;
+	  }
+	  .et-hero-tab:hover {
+		color: white;
+		background: rgba(102, 177, 241, 0.8);
+		transition: all 0.5s ease;
+	  }
+	  
+	  .et-hero-tab-slider {
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 6px;
+		background: #66B1F1;
+		transition: left 0.3s ease;
+	  }
+	  
+	.h1
+	{
+		font-family: 'Reem Kufi Fun', sans-serif;
+	}
+	
